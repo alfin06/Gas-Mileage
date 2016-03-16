@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="Gas_Mileage.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Gas_Mileage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="137*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="costA" HorizontalAlignment="Left" Margin="198,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="100" TextChanged="costA_TextChanged"/>
+        <TextBlock x:Name="textBlock" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="51,35,0,0" TextWrapping="Wrap" FontSize="25" Text="Vehicle A" VerticalAlignment="Top" Height="41" Width="199"/>
+        <TextBlock x:Name="textBlock1" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="435,35,0,0" TextWrapping="Wrap" FontSize="25" Text="Vehicle B" VerticalAlignment="Top" Height="33" Width="121"/>
+        <TextBlock x:Name="textBlock2" Foreground="White" HorizontalAlignment="Left" Margin="51,100,0,0" TextWrapping="Wrap" Text="Cost of gas:" VerticalAlignment="Top" Height="32" Width="94"/>
+        <TextBlock x:Name="textBlock3" Foreground="White" Height="32" Width="94" HorizontalAlignment="Left" Margin="51,191,0,0" TextWrapping="Wrap" Text="Distance:" VerticalAlignment="Top"/>
+        <TextBox x:Name="mileA" HorizontalAlignment="Left" Margin="198,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="100" TextChanged="mileA_TextChanged"/>
+        <TextBlock x:Name="textBlock4" Foreground="White" Height="32" Width="114" HorizontalAlignment="Left" Margin="51,295,0,0" TextWrapping="Wrap" Text="Gallons of fuel:" VerticalAlignment="Top"/>
+        <TextBox x:Name="gallonsA" HorizontalAlignment="Left" Margin="198,295,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="100" TextChanged="gallonsA_TextChanged"/>
+        <TextBlock x:Name="textBlock5" Foreground="White" Height="32" Width="94" HorizontalAlignment="Left" Margin="435,100,0,0" TextWrapping="Wrap" Text="Cost of gas:" VerticalAlignment="Top"/>
+        <TextBox x:Name="costB" HorizontalAlignment="Left" Margin="583,100,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="100" TextChanged="costB_TextChanged"/>
+        <TextBlock x:Name="textBlock6" Foreground="White" Height="32" Width="94" HorizontalAlignment="Left" Margin="435,191,0,0" TextWrapping="Wrap" Text="Distance:" VerticalAlignment="Top"/>
+        <TextBox x:Name="mileB" HorizontalAlignment="Left" Margin="583,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="100" TextChanged="mileB_TextChanged"/>
+        <TextBlock x:Name="textBlock7" Foreground="White" Height="32" Width="121" HorizontalAlignment="Left" Margin="435,295,0,0" TextWrapping="Wrap" Text="Gallons of fuel:" VerticalAlignment="Top"/>
+        <TextBox x:Name="gallonsB" HorizontalAlignment="Left" Margin="583,295,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="32" Width="100" TextChanged="gallonsB_TextChanged"/>
+        <TextBlock x:Name="cpmA" Foreground="White" FontWeight="ExtraLight" FontSize="25" HorizontalAlignment="Left" Margin="198,401,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="42" Width="159"/>
+        <TextBlock x:Name="cpmB" Foreground="White" FontWeight="ExtraLight" FontSize="25" HorizontalAlignment="Left" Margin="583,401,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="42" Width="159"/>
+        <TextBlock x:Name="mpgA" Foreground="White" FontWeight="ExtraLight" FontSize="25" HorizontalAlignment="Left" Margin="198,454,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="51" Width="159"/>
+        <TextBlock x:Name="mpgB" Foreground="White" FontWeight="ExtraLight" FontSize="25" HorizontalAlignment="Left" Margin="583,454,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="50" Width="159"/>
+        <TextBlock x:Name="errorCostA" Foreground="Red" HorizontalAlignment="Left" Margin="31,132,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="51" Width="384"/>
+        <TextBlock x:Name="textBlock8" Foreground="White" HorizontalAlignment="Left" Margin="51,400,0,0" TextWrapping="Wrap" Text="Cost per Mile:" VerticalAlignment="Top" Height="20" Width="111"/>
+        <TextBlock x:Name="textBlock9" Foreground="White" Margin="51,454,0,0" TextWrapping="Wrap" Text="Miles per Gallon:" VerticalAlignment="Top" Height="20" HorizontalAlignment="Left" Width="111"/>
+        <TextBlock x:Name="textBlock10" Foreground="White" HorizontalAlignment="Left" Margin="435,400,0,0" TextWrapping="Wrap" Text="Cost per Mile:" VerticalAlignment="Top" Height="20" Width="111"/>
+        <TextBlock x:Name="textBlock11" Foreground="White" HorizontalAlignment="Left" Margin="435,454,0,0" TextWrapping="Wrap" Text="Miles per Gallon:" VerticalAlignment="Top" Height="20" Width="111"/>
+        <TextBlock x:Name="errorCostB" Foreground="Red" HorizontalAlignment="Left" Margin="435,132,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="51" Width="384"/>
+        <TextBlock x:Name="errorMileA" Foreground="Red" HorizontalAlignment="Left" Margin="31.014,228.015,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="62.34" Width="386.661" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto"/>
+        <TextBlock x:Name="errorMileB" Foreground="Red" HorizontalAlignment="Left" Margin="440,228,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="62" Width="384"/>
+        <TextBlock x:Name="errorGallonA" Foreground="Red" HorizontalAlignment="Left" Margin="31,332,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="56" Width="384"/>
+        <TextBlock x:Name="errorGallonB" Foreground="Red" HorizontalAlignment="Left" Margin="435,332,0,0" TextAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="56" Width="384"/>
+        <TextBlock x:Name="question" Foreground="White" HorizontalAlignment="Left" Margin="51,561,0,0" FontSize="20" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock x:Name="bestVehicle" Foreground="White" FontSize="20" FontWeight="SemiBold" HorizontalAlignment="Left" Margin="501,561,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Button x:Name="compare" Background="DarkBlue" Foreground="White" Content="Compare" HorizontalAlignment="Left" Margin="337,510,0,0" VerticalAlignment="Top" Click="compare_Click"/>
+    </Grid>
+</Page>
